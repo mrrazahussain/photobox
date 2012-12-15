@@ -2,6 +2,19 @@
 
 body {
   padding-top: 60px;
+  background: #17181B;
+
 }
 
 @import "bootstrap-responsive";
+
+.main-area {
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+}
+.form-actions{
+  background: none;
+}
+.modal-header{
+
+}

@@ -13,7 +13,6 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails', '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'bootstrap-sass', '~> 2.2.1.1'
 
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -23,11 +22,17 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "devise", "~> 2.1.2"
+gem "cancan", "~>1.6.8"
+gem "rolify", "~> 3.2.0"
+gem 'bootstrap-sass', '~> 2.2.1.1'
 gem "simple_form", "~> 2.0.4"
 
 group :development do
-  gem "haml", "~> 3.1.7"
+  gem "haml-rails"
   gem "quiet_assets"
+  gem "letter_opener"
+  gem "thin"
 
 end
 

@@ -3,7 +3,7 @@
   %head
     %meta{:charset => "utf-8"}
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
-    %title= content_for?(:title) ? yield(:title) : "Myapp"
+    %title= content_for?(:title) ? yield(:title) : "PhotoBOX"
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
     = stylesheet_link_tag "application", :media => "all"
@@ -11,15 +11,15 @@
     = csrf_meta_tags
     = yield(:head)
   %body
-    %header.navbar.navbar-fixed-top
+    %header.navbar.navbar-fixed-top.navbar-inverse
       %nav.navbar-inner
         .container
-          -#= render 'layouts/navigation'
-    #main{:role => "main"}
+          = render 'layouts/navigation'
       .container
-        .content
+        .main-area
           .row
             .span12
               = render 'layouts/messages'
               = yield
-          %footer
+          %hr
+          =render 'layouts/footer'
