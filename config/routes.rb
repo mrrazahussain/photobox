@@ -1,11 +1,15 @@
 Photobox::Application.routes.draw do
 
+
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'albums#index'
   end
-  root :to => "home#index"
+  root :to => "albums#index"
   devise_for :users
   resources :users
+  resources :albums
+  resources :photos
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

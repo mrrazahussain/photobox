@@ -1,0 +1,10 @@
+%hr
+  = simple_form_for @photo, :html=>{:multipart=>true,:class=>'form-horizontal'} do |f|
+    = f.error_notification
+    .form-inputs
+      = f.input :description,  :autofocus => true
+      = f.input :image , :as=>"file"
+      = f.input  :remote_image_url
+      = f.hidden_field :album_id
+    .form-actions
+      = f.button :submit, "Save"
