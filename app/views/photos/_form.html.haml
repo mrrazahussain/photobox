@@ -6,5 +6,6 @@
       = f.input :image , :as=>"file"
       = f.input  :remote_image_url
       = f.hidden_field :album_id
+      = f.input :remove_image,:as=>"boolean"
     .form-actions
       = f.button :submit, "Save"

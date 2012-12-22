@@ -1,20 +1,10 @@
 .page-header
+  = render "layouts/albums_nav_bar"
   %h3.pull-left
     Albums
   =link_to "New Album",new_album_path, :class=>'pull-right'
+
 %ul.unstyled
-  - @albums.each do |album|
-    %li.pull-left
-      .album-box
-        .album-content
-          =image_tag album.photos.first.image.url(:thumb).to_s if album.photos.present?
-        .album-footer
-          .album-title
-            =album.title
-      .actions-list
-        %ul
-          %li.pull-left= link_to 'Show', album
-          %li.pull-left= link_to 'Add New Photo', new_photo_path(:album_id=>album.id)
-          %li.pull-left= link_to 'Edit', edit_album_path(album)
-          %li.pull-left= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' }
+  =render :partial=>@albums,:spacer_template => "horizontal_rule"
+
 
