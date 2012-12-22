@@ -13,8 +13,4 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-<<<<<<< HEAD
-/.idea/*
-=======
 /.idea
->>>>>>> master
