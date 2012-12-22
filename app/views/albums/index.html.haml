@@ -1,6 +1,7 @@
 .page-header
-  %h3
+  %h3.pull-left
     Albums
+  =link_to "New Album",new_album_path, :class=>'pull-right'
 %ul.unstyled
   - @albums.each do |album|
     %li.pull-left

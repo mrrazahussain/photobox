@@ -29,12 +29,11 @@ gem 'bootstrap-sass', '~> 2.2.1.1'
 gem "simple_form", "~> 2.0.4"
 gem "rmagick"
 gem "carrierwave"
-
+gem "thin"
+gem "haml-rails"
 group :development do
-  gem "haml-rails"
   gem "quiet_assets"
   gem "letter_opener"
-  gem "thin"
 
 end
 
